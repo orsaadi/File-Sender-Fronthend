@@ -48,7 +48,7 @@ document.getElementById('upload-form').onsubmit = async function (event) {
     const code = document.getElementById('upload-code').value;
 
     const response = await fetch(
-      `https://file-sender-backhend3.vercel.app/upload/${code}`,
+      `https://file-sender-backhend3.vercel.app//upload/${code}`,
       {
         method: 'POST',
         body: formData,
