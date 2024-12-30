@@ -7,13 +7,16 @@ async function generateCode() {
     if (!response.ok) {
       throw new Error(`Error: ${response.statusText}`);
     }
-    const data = await response.json();
+    const responseText = await response.text(); 
+    console.log('Response text:', responseText);
+    const data = JSON.parse(responseText);
     document.getElementById('chat-code').innerText = `Chat Code: ${data.code}`;
   } catch (error) {
     console.error('Failed to generate code:', error);
     alert('Failed to generate chat code. Please try again later.');
   }
 }
+
 
 // Function to join a session
 async function joinSession(event) {
