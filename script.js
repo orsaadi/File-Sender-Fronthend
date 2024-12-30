@@ -2,7 +2,7 @@ async function generateCode() {
   try {
     console.log('Sending request to generate code...');
     const response = await fetch(
-      'https://file-sender-backhend3.vercel.app/generate_code'
+      'https://file-sender-backhend3-6lumxdjhm-or-saadis-projects.vercel.app//generate_code'
     );
     if (!response.ok) {
       throw new Error(`Error: ${response.statusText}`);
